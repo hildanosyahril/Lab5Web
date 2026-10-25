@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksperimen Mandiri - Modul 5</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        section { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 8px; background-color: #f9f9f9; }
+        button { cursor: pointer; padding: 6px 12px; margin: 4px 0; }
+        .error { color: red; font-size: 14px; }
+        .success { color: green; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <h1>Eksperimen Mandiri JavaScript</h1>
+
+    <!-- Eksperimen 1 -->
+    <section>
+        <h3>1. Ubah Latihan 3 - Input Dua Nilai dari Prompt dan Konversi Number</h3>
+        <button type="button" onclick="eksperimen1()">Jalankan Hitung Prompt</button>
+        <p id="hasilEksperimen1"></p>
+    </section>
+
+    <!-- Eksperimen 7 -->
+    <section>
+        <h3>7. Tabel Perkalian 7 - 1 sampai 10</h3>
+        <button type="button" onclick="eksperimen7()">Tampilkan Tabel Perkalian 7</button>
+        <div id="tabelPerkalian"></div>
+    </section>
+
+    <!-- Eksperimen 8 -->
+    <section>
+        <h3>8. Function cekGenap angka</h3>
+        <label for="inputGenap">Masukkan Angka:</label>
+        <input type="number" id="inputGenap">
+        <button type="button" onclick="tesCekGenap()">Cek Genap/Ganjil</button>
+        <p id="hasilGenap"></p>
+    </section>
+
+    <!-- Eksperimen 9 -->
+    <section>
+        <h3>9. Validasi Form - Kolom Tidak Boleh Kosong</h3>
+        <form onsubmit="return validasiForm(event)">
+            <label for="namaInput">Nama Mahasiswa:</label><br>
+            <input type="text" id="namaInput"><br>
+            <span id="pesanError" class="error"></span><br><br>
+            <button type="submit">Kirim Form</button>
+        </form>
+        <p id="pesanSukses" class="success"></p>
+    </section>
+
+    <!-- Eksperimen 10 -->
+    <section>
+        <h3>10. Latihan 8 - Menu Makanan</h3>
+        <label><input type="checkbox" class="menu-makanan" value="5000"> Ayam Goreng - Rp5.000</label><br>
+        <label><input type="checkbox" class="menu-makanan" value="500"> Tempe - Rp500</label><br>
+        <label><input type="checkbox" class="menu-makanan" value="2500"> Telur Dadar - Rp2.500</label><br>
+        <label><input type="checkbox" class="menu-makanan" value="3000"> Es Teh Manis - Rp3.000</label><br>
+        <label><input type="checkbox" class="menu-makanan" value="4000"> Nasi Putih - Rp4.000</label><br>
+        <p><b>Total Harga: Rp<span id="totalHarga">0</span></b></p>
+    </section>
+
+    <!-- Eksperimen 11 -->
+    <section>
+        <h3>11. Tombol Menyembunyikan atau Menampilkan Elemen HTML</h3>
+        <button type="button" onclick="toggleElemen()">Sembunyikan / Tampilkan Teks di Bawah</button>
+        <p id="teksToggle" style="background-color: #e0f7fa; padding: 10px; border-radius: 4px;">
+            Teks ini bisa disembunyikan dan ditampilkan kembali menggunakan JavaScript!
+        </p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
